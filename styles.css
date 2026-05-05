@@ -11,6 +11,19 @@ body {
     align-items: center;
     min-height: 100vh;
     color: white;
+    background-attachment: scroll; /* Changed from fixed to scroll for pseudo-element positioning */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red; /* Red tint */
+    mix-blend-mode: multiply; /* Blend mode to tint the background image */
+    z-index: -1; /* Ensure it's behind the content */
 }
 
 .container {
